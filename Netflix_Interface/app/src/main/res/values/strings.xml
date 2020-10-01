@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Netflix_Interface</string>
+    <string name="menu_mensagem">Mensagem</string>
+    <string name="menu_volume">Volume</string>
+    <string name="menu_avaliações">Avaliações</string>
+    <string name="menu_epsódios">Epsodios</string>
 </resources>
