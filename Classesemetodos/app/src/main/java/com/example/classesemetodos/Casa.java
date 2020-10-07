@@ -5,6 +5,6 @@ public class Casa {
     String cor;
 //    metodos
     public void abrirPorta(){
-        System.out.printf("Porta Aberta");
+        System.out.println("Porta Aberta");
     }
 }
