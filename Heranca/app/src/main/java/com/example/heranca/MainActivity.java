@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.println(cachorro.getCor());
 
+        cachorro.correr();
+
 /*//        Usando a classe passaro com a herança da classe animal
         Passaro passaro = new Passaro();
         passaro.voar();*/

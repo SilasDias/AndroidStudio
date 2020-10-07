@@ -8,15 +8,29 @@ public class Animal {
 
 //    GETTER E SETTER
 
-//    Setter
+    public int getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
+
     public void setCor(String cor){
 //        formatação ou validar a cor antes de mudar
         this.cor = cor;
     }
 
-//    Getter
     public String getCor(){
         return this.cor;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
 
 
