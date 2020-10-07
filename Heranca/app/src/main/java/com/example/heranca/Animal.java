@@ -40,6 +40,6 @@ public class Animal {
     }
 
     public void correr() {
-        System.out.println("Correr como um animal!");
+        System.out.print("Correr como um ");
     }
 }

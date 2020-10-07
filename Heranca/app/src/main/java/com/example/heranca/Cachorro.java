@@ -8,6 +8,7 @@ public class Cachorro extends Animal {
 
 //    Sobreescrevendo a classe correr da classe animal
     public void correr(){
-        System.out.println("Correr como um cão !");
+        super.correr();
+        System.out.println("cão !");
     }
 }

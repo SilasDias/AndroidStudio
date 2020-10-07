@@ -18,15 +18,15 @@ public class MainActivity extends AppCompatActivity {
 
 //      Usando a classe cachorro com a herança da classe animal
         Cachorro cachorro = new Cachorro();
-        cachorro.setCor("Caramelo");
-
-        System.out.println(cachorro.getCor());
+//        cachorro.setCor("Caramelo");
+//        System.out.println(cachorro.getCor());
 
         cachorro.correr();
 
-/*//        Usando a classe passaro com a herança da classe animal
+//        Usando a classe passaro com a herança da classe animal
         Passaro passaro = new Passaro();
-        passaro.voar();*/
+        passaro.voar();
+        passaro.correr();
 
     }
 }
