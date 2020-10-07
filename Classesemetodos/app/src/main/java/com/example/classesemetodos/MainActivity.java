@@ -34,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
         funcionario.salary = 2800;
 
 //        Chamando o metodo
-        funcionario.recoveSalary();
+//        funcionario.recoveSalary();
+
+//        Chamando metodo e pegando o valor
+        double returnSalary = funcionario.returnSalary(0.10, 100);
+        System.out.println("O salario do " + funcionario.name + " " + returnSalary);
 
 
     }
