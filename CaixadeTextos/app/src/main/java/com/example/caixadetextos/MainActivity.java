@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
 //    Atributos dos checks
     private CheckBox checkVerde, checkBranco, checkVermelho;
+
+//    RadioButton
+    private RadioButton sexoMasculino, sexoFeminino;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,35 @@ public class MainActivity extends AppCompatActivity {
         checkVerde = findViewById(R.id.checkVerde);
         checkBranco = findViewById(R.id.checkBranco);
         checkVermelho = findViewById(R.id.checkVermelho);
+
+//    RadioButton
+        sexoMasculino = findViewById(R.id.radioButtonMasculino);
+        sexoFeminino = findViewById(R.id.radioButtonFeminino);
+
+    }
+
+    public  void radioButton(){
+
+        String valida = "";
+        if(sexoMasculino.isChecked()){
+            valida = "Sexo Masculino - ";
+        }else if(sexoFeminino.isChecked()){
+            valida = "Sexo Feminino - ";
+        }
+
+        textoResultado.setText(valida);
+    }
+
+
+    public void enviar(View view) {
+
+        radioButton();
+//        check();
+
+/*//        Pegando o evento e colocando em uma variavel
+        String nome = campoNome.getText().toString();
+        String email = campoEmail.getText().toString();
+        textoResultado.setText("nome: " + nome + "\n" + "e-mail: " + email);*/
     }
 
     public void check(){
@@ -53,16 +86,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         textoResultado.setText(texto);
-    }
-
-    public void enviar(View view) {
-
-        check();
-
-/*//        Pegando o evento e colocando em uma variavel
-        String nome = campoNome.getText().toString();
-        String email = campoEmail.getText().toString();
-        textoResultado.setText("nome: " + nome + "\n" + "e-mail: " + email);*/
     }
 
     public void limpar(View view){
