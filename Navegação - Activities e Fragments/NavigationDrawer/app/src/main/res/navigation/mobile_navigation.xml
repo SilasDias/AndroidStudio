@@ -30,6 +30,12 @@
         tools:layout="@layout/fragment_tools" />
 
     <fragment
+        android:id="@+id/nav_contato"
+        android:name="com.example.navigationdrawer.ui.contato.ContatoFragment"
+        android:label="@string/menu_contato"
+        tools:layout="@layout/fragment_contato" />
+
+    <fragment
         android:id="@+id/nav_share"
         android:name="com.example.navigationdrawer.ui.share.ShareFragment"
         android:label="@string/menu_share"
