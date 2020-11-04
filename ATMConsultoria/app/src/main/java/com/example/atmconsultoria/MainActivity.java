@@ -1,5 +1,7 @@
 package com.example.atmconsultoria;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -35,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                enviarEmail();
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -54,6 +55,30 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+    public void enviarEmail(){
+
+        String celular = "tel:11996352894";
+        String imagem = "http://hyperallergic.com/wp-content/uploads/2015/07/wallstreetslavemarket05.jpg";
+        String maps = "https://www.google.com.br/maps/place/Esta%C3%A7%C3%A3o+Anhangaba%C3%BA/@-23.5478432,-46.6410189,17z/data=!3m1!4b1!4m5!3m4!1s0x94cef51bac71d3f1:0xb68411ecc3611473!8m2!3d-23.5478432!4d-46.6388302";
+//        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(celular));
+//        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(imagem));
+//        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(maps));
+
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"atendimento@atmconsultoria.com.br"});
+        intent.putExtra(Intent.EXTRA_SUBJECT,"Contato pelo APP");
+        intent.putExtra(Intent.EXTRA_TEXT, "Mensagem Automática");
+
+//        intent.setType("message/rfc822");
+//        intent.setType("text/plain");
+//        intent.setType("image/*");
+        intent.setType("application/pdf");
+
+        startActivity(Intent.createChooser(intent, "Escolha um App de e-mail"));
+
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
