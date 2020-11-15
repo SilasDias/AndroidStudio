@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 //            Update
 //            bancoDados.execSQL("UPDATE pessoas SET idade = 19 WHERE nome = 'Mariana' ");
 //            bancoDados.execSQL("UPDATE pessoas SET nome = 'Mariana Silva', idade = 19 WHERE id = 3 ");
- 
+
 //            Delete
 //            bancoDados.execSQL("DELETE FROM pessoas WHERE nome = 'Joana' AND idade = 33");
 //            bancoDados.execSQL("DELETE FROM pessoas WHERE id = 4 "); //Deletando Id's
