@@ -3,6 +3,7 @@ package com.example.listadetarefas.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,17 +34,26 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+        Tarefa tarefa = listaTarefas.get(position);
+        holder.tarefa.setText(tarefa.getNomeTarefa());
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return this.listaTarefas.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
+        TextView tarefa;
+
         public MyViewHolder(@NonNull View itemView) {
+
             super(itemView);
+
+            tarefa = itemView.findViewById(R.id.textTarefa);
+
         }
     }
 
